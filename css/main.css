@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap');
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.scrollToTop-btn{
+    z-index: 999;
+    position: fixed;
+    background-color: rgb(3,86,249);
+    color: white;
+    width: 45px;
+    height: 45px;
+    right: 0;
+    bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.scrollToTop-btn.active{
+    right: 20px;
+    opacity: 1;
+}
+/* //qalqib chiqishi// */
+.reveal{
+    position: relative;
+    transform:  translateY(50px);
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+.reveal.active{
+    position: relative;
+    transform:  translateY(0px);
+    opacity: 1;
+}
+/* ////////////// */
+header{
+    width: 100%;
+    height: 120vh;
+    background-image: url(../img/nasa-Q1p7bh3SHj8-unsplash\ \(1\)\ 1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+.navbar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    transition: all .3s ease;
+    z-index: 999;
+    background-color: rgb(29, 83, 124);
+}
+.navbar.sticky{
+    background-color: rgb(172, 114, 39);
+    height: 50px;
+}
+.telmenular{
+    display: none;
+}
+.menular{
+    display: none;
+}
+.logo{
+    width: 40%;
+    height: 40px;
+}
+.logo img{
+    width: 140px;
+    margin-left: 20px;
+}
+.nav{
+    width: 44%;
+    height: 40px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 5px;
+    border-radius: 13px;
+    padding: 0 12px;
+}
+.nav a:hover{
+    background-color: rgb(29,83,124);
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px 2px rgb(102, 102, 112) ;
+}
+.number{
+    width: 15%;
+    height: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.number .num{
+    margin-left: 10px;
+}
+.number .num a{
+    text-decoration: none;
+    color: white;
+}
+.text1{
+    width: 45%;
+    margin-top: 280px;
+    margin-left: 18%;
+    color: white;
+    font-size: 48px;
+    line-height: 68px;
+    font-family: 'Poppins', sans-serif;
+}
+.text1 span{
+    color: rgb(255,157,0);
+}
+header .btn{
+    width: 220px;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(29,83,124);
+    padding: 0 12px;
+    border-radius: 20px;
+    margin-left: 18%;
+    margin-top: 5px;
+}
+.btn p{
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-left: 8px;
+}
+.btn img{
+    width: 15px;
+}
+.courses{
+    background-image: url(../img/background.png);
+    background-position-y: -750px;
+    background-size: 100%;
+    background-color: rgb(245,245,245);
+    display: block;
+    border: 1px solid rgb(245,245,245);
+}
+.cardlar{
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+.card{
+    width: 30%;
+    height: 400px;
+    margin-top: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: rgb(29,83,124);
+    color: white;
+    transition:  all 1s ease;
+}
+.cardlar .card:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 20px 2px rgb(109, 109, 109);
+    z-index: 888;
+}
+.card:nth-child(2){
+    color: rgb(29,83,124);
+}
+.card:nth-child(2) li{
+    color: rgb(29,83,124);
+}
+.card:nth-child(2) .btn1{
+    color: white;
+}
+.card h4{
+    margin-left: 24px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -15px;
+}
+.card a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    margin-top: -13px;
+}
+ul li {
+    font-size: 12px;
+    line-height: 22px;
+    color: rgb(210,221,229);
+}
+ul li:hover{
+    cursor: pointer;
+    letter-spacing: 2px;
+    color: black;
+}
+.btn1{
+    width: 74%;
+    margin-left: 13%;
+    margin-top: 10px;
+    height: 45px;
+    text-align: center;
+    font-family: 'poppins' , sans-serif;
+    line-height: 45px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgb(54,157,254), rgb(3,86,249));
+    transition:  all .5s ease;
+}
+.btn1:hover, .btn4:hover{
+    border-radius: 22.5px;
+    background: linear-gradient(90deg, rgb(3,86,249), rgb(54,157,254));
+    box-shadow: 0 0 20px 2px black;
+    letter-spacing: 2px;
+}
+.cardlar .card:nth-child(2) .btn1{
+    margin-top: 32px;
+}
+.cardlar .card:nth-child(3) .btn1{
+    margin-top: 27px;
+}
+
+.card:nth-child(2){
+    background-color: white;
+}
+.card img{
+    width: 150px;
+}
+.text2{
+    color: rgb(29,83,124);
+    font-size: 48px;
+    text-align: center;
+    margin-top: 40px;
+}
+.buttonlar{
+    width: 280px;
+    margin-top: 12px;
+    margin-left: 39%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn2, .btn3{
+    width: 44%;
+    height: 30px;
+    background:  linear-gradient(90deg, rgb(54,157,254), rgb(3,86,249)) ;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.btn2-1{
+    background: rgb(0, 22, 65);
+    box-shadow: 0 0 10px 2px rgb(29,83,124);
+}
+.btn2:hover, .btn3:hover{
+    background: rgb(0, 22, 65);
+    
+}
+
+.manzillar{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+.joylashuv2{
+    width: 100%;
+    box-shadow: 0 0 20px 5px rgb(29,83,124);
+}
+.joylashuv1{
+    width: 100%;
+    box-shadow: 0 0 20px 5px rgb(29,83,124);
+}
+.fergana{
+    width: 40%;
+    transition:  all 1s ease;
+}
+.fergana2{
+    opacity: 0;
+    display: none;
+}
+.margilon{
+    width: 30%;
+    transition:  all 1s ease;
+}
+.margilan2{
+    display: none;
+    opacity: 0;
+}
+.footer{
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.logo2 img{
+    width: 180px;
+    margin-left: 70px;
+}
+.logo2{
+    width: 48%;
+}
+.tarmoqlar{
+    width: 25%;
+}
+.tarmoqlar img{
+    margin-left: 20px;
+}
+.tarmoqlar img:hover{
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+.haqida{
+    width: 28%;
+    height: 100px;
+    display: flex;
+    color: rgb(29,83,124);
+}
+.haqida div:nth-child(1){
+    width: 35%;
+}
+.haqida div h5{
+    margin-top: 10px;
+}
+.haqida h6{
+    font-size: 8px;
+}
+/* //////////////////////////////////////////////// */
+.savodhonlik{
+    width: 100%;
+    display: inline-block;
+}
+.block1{
+    width: 100%;
+    height: 110vh;
+    background-image: url(../img/Этапы.png);
+    background-repeat: no-repeat;
+    background-position-y: -40px;
+    background-size: 90%;
+    background-color: rgb(29,83,124);
+    display: flex;
+}
+.box{
+    width: 24%;
+    height: 80vh;
+    color: white;
+    margin-top: 200px;
+    margin-left: 8%;
+}
+.text3{
+    color: rgb(255, 255, 255);
+    font-size: 46px;
+    line-height: 54px;
+}
+.btn4{
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(90deg, rgb(54,157,254), rgb(3,86,249));
+    line-height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all .5s ease;
+}
+.box2{
+    width: 560px;
+    height: 450px;
+    margin-top: 160px;
+    margin-left: 15%;
+}
+.box2 img{
+    width: 100%;
+}
+.block2{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(245,245,245);
+    padding: 0 25px;
+}
+.block2 div{
+    width: 350px;
+    height: 300px;
+    background-color: rgb(29, 83, 124);
+    margin: 50px 0px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    box-shadow:  0px 0px 20px .5px rgb(29,83,124);
+    transition: all .3s ease;
+}
+.block2 div img{
+    margin-top: -20px;
+    width: 70%;
+}
+.block2 h4{
+    letter-spacing: 1px;
+}
+.block2 div:hover{
+    border-radius: 15%;
+    transform: scale(1.05);
+}
+/* /////////////////////////ANDROID */
+.box a{
+    text-decoration: none;
+    color: white;
+}
+
+.android{
+    width: 100%;
+    display: inline-block;
+}
+.androidbox{
+    width: 44%;
+}
+.androidimg{
+    margin-left: 0px;
+    margin-top: 100px;
+}
+.java{
+    margin-top: -50px !important;
+}
+/* //////////////////Frontend///////////////////// */
+
+.frontend{
+    width: 100%;
+    display: inline-block;
+}
+.frontendbox{
+    width: 36%;
+}
+.frontendimg{
+    width: 50%;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+.frontendimg img{
+    width: 100%;
+}
+.javascript{
+    width: 120% !important;
+    margin-top:15px !important;
+    margin-left: -40px;
+}
+/* //////////////////////Backend//////////// */
+
+.django{
+    width: 105% !important;
+    margin-top:15px !important;
+    margin-left: -8px;
+}
+/* /////////////////////////////// */
+.dizaynimg{
+    margin-top: 50px;
+}
+/* //////////////Royxatdan otish////////////// */
+
+.login{
+    width: 100%;
+    height: 104vh;
+    background-image: url(../img/Group\ 11.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-color: rgb(245,245,245);
+    background-position-x: right;
+    background-position-y: 100px;
+    display: inline-block;
+}
+.body{
+    width: 100%;
+    display: flex;
+}
+.text4{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid rgb(245,245,245);
+    font-size: 33px;
+    text-align: center;
+    color: rgb(29, 83, 124);
+    margin-top: 70px;
+}
+.text4-1{
+    margin-top: 0px;
+}
+.label{
+    width: 40%;
+    text-align: right;
+    line-height: 50px;
+    margin-top: 115px;
+}
+.input{
+    margin-left: 10px;
+    margin-top: 102px;
+}
+.input input{
+    margin-top: 22px;
+    width: 420px;
+    height: 28px;
+    border: 1px solid rgb(217,217,217);
+    padding-left: 5px;
+    outline: none;
+}
+.input select{
+    outline: none;
+    width: 420px;
+    height: 28px;
+    margin-top: 24px;
+    border: 1px solid rgb(217,217,217);
+}
+.input textarea{
+    width: 420px;
+    margin-top: 21px;
+    padding-top: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgb(217,217,217);
+}
+.btn5{
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(90deg, rgb(54,157,254), rgb(3,86,249));
+    color: white;
+    text-align: center;
+    margin-left: 48%;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 40px;
+    border-radius: 7px;
+    transition:  all .3s ease;
+}
+.btn5:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background: linear-gradient(90deg,rgb(3,86,249) ,  rgb(54,157,254));
+    box-shadow: 0px 0px 20px 4px blue;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+/* /////////////////Biz haqimizda///////////////// */
+
+.navbar2{
+    background-color: rgb(172, 114, 39)
+}
+
+.biz-haqimizda{
+    width: 100%;
+    height: 110vh;
+    background-image: url(../img/navbar.png);
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    background-position-y: -50px; 
+    background-color: rgb(240, 240, 240);
+    display: inline-block;  
+    
+}
+.codial{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 100px;
+    /* height: 300px; */
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: rgb(29, 83, 124);
+    background-image: url(../img/logo\ \(2\)\ 2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* /////////////////////////-MEDIA-/////////////////////////////// */
+
+@media (max-width: 446.9px){
+    .nav{
+        display: none;
+    }
+    .navbar{
+        justify-content: space-around;
+        align-items: center;
+        height: 55px;
+        z-index: 999 !important;
+    }
+    .logo{
+        width: 30%;
+        margin-top: 10px;
+    }
+    .logo img{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .number{
+        width: 50%;
+        font-size: 14px;
+    }
+    .coll{
+        margin-top: 5px;
+    }
+    .telmenular{
+        display: block;
+        width: 26px;
+        height: 26px;
+    }
+    .telmenular i{
+        font-size: 26px;
+    }
+    .menular{
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 70vh;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    .menu{
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 70%;
+        height: 70vh;
+        background-color: black;
+        opacity: 1;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .menular a{
+        color: white;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .menular a:hover{
+        box-shadow: 0 0 20px 3px white;
+        border-radius: 20px;
+        padding: 3px 15px;
+        letter-spacing: 1.5px;
+    }
+    header{
+        height: 280px;
+        background-color: rgb(245,245,245);
+    }
+    .text1{
+        margin: 0;
+        width: 70%;
+        margin-left: 5%;
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 100px;
+    }
+    .btn{
+        margin-left: 5% !important;
+        width: 55% !important;
+    }
+    .btn img{
+        width: 10px;
+    }
+    .btn p{
+        font-size: 10px;
+        letter-spacing: .2px;
+    }
+    .cardlar{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .cardlar .card{
+        width: 80%;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .text2{
+        font-size: 30px;
+    }
+    .buttonlar{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .login{
+        height: 450px;
+    }
+    .label{
+        width: 40% !important;
+        margin-top: 30px;
+        font-size: 10px;
+    }
+    .input{
+        width: 50%;
+        margin-top: 20px;
+    }
+    .input input{
+        width: 100%;
+        font-size: 10px;
+    }
+    .input select{
+        width: 100%;
+        font-size: 10px;
+    }
+    .input textarea{
+        width: 100%;
+        font-size: 10px;
+        height: 80px;
+    }
+    .btn5{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 15px;
+    }
+    .logo2{
+        padding: 0;
+        width: 25%;
+    }
+    .logo2 img{
+        margin: 0;
+        width: 100%;
+    }
+    .tarmoqlar{
+        width: 45%;
+        padding: 0;
+    }
+    
+    .haqida{
+        width: 80%;
+    }
+    .biz-haqimizda{
+        height: 55vh;
+    }
+    .codial{
+        width: 95%;
+        margin-top: 10px !important;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .scrollToTop-btn.active{
+        right: 10px !important;
+    }
+    .block2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .block2 div{
+        margin-top: 0px;
+    }
+    .block2 div:nth-child(1){
+        margin-top: 40px;
+    }
+    .box{
+        width: 90%;
+    }
+    .box p{
+        width: 100% !important;
+    }
+    .box2{
+        position: absolute;
+        top: -100px !important;
+        left: 0px;
+        padding: 0;
+        width: 250px;
+        z-index: 0;
+    }
+    .box{
+        margin-top: 270px;
+    }
+    .androidimg{
+        margin-top: 180px;
+        margin-left: 50px;
+    }
+    .androidbox{
+        margin-top: 300px;
+    }
+    .text3{
+        font-size: 35px;
+    }
+    .box p{
+        font-size: 12px;
+    }
+    .androidblock1{
+        height: 800px;
+    }
+    .frontendimg{
+        margin-top: 150px;
+        margin-left: 70px;
+    }
+    .dizaynimg{
+        margin-top: 160px;
+    }
+}
